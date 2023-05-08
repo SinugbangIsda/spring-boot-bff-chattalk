@@ -28,3 +28,10 @@ export interface AuthLayoutProps {
     formComponent: JSX.Element | JSX.Element[];
     footer: JSX.Element | JSX.Element[];
 };
+
+export interface AuthCardFooterProps {
+    message?: string;
+    navigateText: string;
+    navigateLink: string;
+    navigateBack?: boolean;
+};
