@@ -1,10 +1,22 @@
-import React from 'react';
+import AuthLayout from '../../components/auth/authlayout';
+import RegisterForm from '../../components/auth/register/registerform';
+import AuthCardFooter from '../../components/auth/authlayout/authcardfooter';
 
 const Register = () => {
   return (
-    <div>
-      Register
-    </div>
+    <AuthLayout 
+      heading = "Create an account"
+      formComponent = {
+        <RegisterForm />
+      }
+      footer = {
+        <AuthCardFooter 
+          message = "Already have an account?"
+          navigateLink = "/login"
+          navigateText = "Login"
+        />
+      }
+    />
   )
 }
 
