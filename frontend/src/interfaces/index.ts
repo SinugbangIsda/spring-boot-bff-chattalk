@@ -6,3 +6,8 @@ export interface User {
     imageURI: string | null;
     role: string | null;
 };
+
+export interface LoginUser {
+    emailAddress: string;
+    password: string;
+};
