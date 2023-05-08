@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import PrivateRoute from './components/privateroute';
-import lazyLoad from './utils/lazylLoad';
+import lazyLoad from './utils/lazyLoad';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { ChakraProvider } from '@chakra-ui/react';
