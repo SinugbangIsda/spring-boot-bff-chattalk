@@ -1,13 +1,14 @@
-import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import PrivateRoute from './components/privateroute';
 import lazyLoad from './utils/lazylLoad';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const Dashboard = lazyLoad(() => import('./pages/dashboard'));
 const Login = lazyLoad(() => import('./pages/login'));
 const Register = lazyLoad(() => import('./pages/register'));
+const ForgotPassword = lazyLoad(() => import('./pages/forgotpassword'));
 const Error404 = lazyLoad(() => import('./pages/error404'));
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     element: <Register />
   },
   {
+    path: '/forgotpassword',
+    element: <ForgotPassword />
+  },
+  {
     path: '/*',
     element: <Error404 />
   }
@@ -38,7 +43,9 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <Provider store = { store }>
-      <RouterProvider router = { router } />
+      <ChakraProvider>
+        <RouterProvider router = { router } />
+      </ChakraProvider>
     </Provider>
   )
 };
