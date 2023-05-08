@@ -11,3 +11,10 @@ export interface LoginUser {
     emailAddress: string;
     password: string;
 };
+
+export interface RegisterUser {
+    firstName: string;
+    lastName: string;
+    emailAddress: string;
+    password: string;
+};
