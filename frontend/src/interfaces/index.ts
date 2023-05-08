@@ -22,3 +22,9 @@ export interface RegisterUser {
 export interface ForgotPasswordUser {
     emailAddress: string;
 };
+
+export interface AuthLayoutProps {
+    heading: string;
+    formComponent: JSX.Element | JSX.Element[];
+    footer: JSX.Element | JSX.Element[];
+};
