@@ -6,6 +6,7 @@ import { store } from './redux/store';
 import { ChakraProvider } from '@chakra-ui/react';
 
 const Dashboard = lazyLoad(() => import('./pages/dashboard'));
+const Chat = lazyLoad(() => import('./pages/chat'));
 const Login = lazyLoad(() => import('./pages/login'));
 const Register = lazyLoad(() => import('./pages/register'));
 const ForgotPassword = lazyLoad(() => import('./pages/forgotpassword'));
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Dashboard />
+      },
+      {
+        path: "/chat/:id",
+        element: <Chat />
       }
     ]
   },
