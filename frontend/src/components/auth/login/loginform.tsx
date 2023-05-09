@@ -1,7 +1,8 @@
-import { Button, Checkbox, FormControl, FormLabel, Input, InputGroup, InputRightElement, Stack, Text, VStack } from "@chakra-ui/react";
+import { Button, Checkbox, FormControl, FormLabel, IconButton, Input, InputGroup, InputRightElement, Stack, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { LoginUser } from "../../../interfaces";
 import { Link } from "react-router-dom";
+import { IoMdEye, IoMdEyeOff } from "react-icons/all";
 
 const FORM_VALUES: LoginUser = {
     emailAddress: "",
@@ -70,23 +71,17 @@ const LoginForm = () => {
                             }}
                             value = { formValues.password }
                         />
-                        <InputRightElement width = "4.5rem">
-                            <Button 
-                                h = "1.75rem" 
-                                size = "sm" 
-                                bg = "#25262B"
-                                border = "1px"
-                                borderColor = "#383a40"
-                                color = "white"
-                                _hover = {{
-                                    bg: "#2F3035"
-                                }}
-                                onClick = {() => 
+                        <InputRightElement width = "4.2rem">
+                            <IconButton
+                                aria-label = "Show Password"
+                                h = "1.75rem"
+                                size = "sm"
+                                onClick = {() =>
                                     setShowPassword((showPassword) => !showPassword)
                                 }
                             >
-                            { showPassword ? 'Hide' : 'Show'}
-                        </Button>
+                                { showPassword ? <IoMdEyeOff /> : <IoMdEye />}
+                            </IconButton>
                         </InputRightElement>
                     </InputGroup>
                 </FormControl>
