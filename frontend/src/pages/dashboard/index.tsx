@@ -1,10 +1,10 @@
-import React from 'react';
+import Applayout from "../../components/privateroute/applayout";
 
 const Dashboard = () => {
   return (
-    <div>
-      Dashboard
-    </div>
+    <Applayout>
+      <h1>Dashboard</h1>
+    </Applayout>
   )
 }
 
