@@ -7,7 +7,7 @@ export const authApi = createApi({
         baseUrl: BASE_URLS.api
     }),
     endpoints: (builder) => ({
-        signin: builder.mutation({
+        login: builder.mutation({
             query: (body) => ({
                 url: "/auth/login",
                 method: "POST",
@@ -19,7 +19,7 @@ export const authApi = createApi({
                 credentials: "same-origin"
             })
         }),
-        signup: builder.mutation({
+        register: builder.mutation({
             query: (body) => ({
                 url: "/auth/register",
                 method: "POST",
@@ -35,6 +35,6 @@ export const authApi = createApi({
 });
 
 export const {
-    useSigninMutation,
-    useSignupMutation
+    useLoginMutation,
+    useRegisterMutation
 } = authApi;
