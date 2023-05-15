@@ -35,3 +35,7 @@ export interface AuthCardFooterProps {
     navigateLink: string;
     navigateBack?: boolean;
 };
+
+export interface AppLayoutProps {
+    children: JSX.Element | JSX.Element[];
+};
