@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+  zookeeper:
+    container_name: chattalk
+    image: zookeeper:3.7.1-temurin
+    ports:
+    - "2181:2181"
