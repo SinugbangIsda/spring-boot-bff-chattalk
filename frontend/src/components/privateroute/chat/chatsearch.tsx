@@ -1,7 +1,8 @@
 import { FormControl, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { IoSearch } from "react-icons/all";
+import { SearchInputProps } from "../../../interfaces";
 
-const SearchInput = ({ onChange, onClick, value, ref }: any ) => {
+const SearchInput = ({ onChange, onClick, value, ref }: SearchInputProps ) => {
     return (
         <FormControl 
             id = "search" 
