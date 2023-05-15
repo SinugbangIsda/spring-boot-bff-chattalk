@@ -2,7 +2,7 @@ import { FormControl, Input, InputGroup, InputRightElement } from "@chakra-ui/re
 import { IoSearch } from "react-icons/all";
 import { SearchInputProps } from "../../../interfaces";
 
-const SearchInput = ({ onChange, onClick, value, ref }: SearchInputProps ) => {
+const SearchInput = ({ onChange, onClick, value, inputRef }: SearchInputProps ) => {
     return (
         <FormControl 
             id = "search" 
@@ -24,7 +24,7 @@ const SearchInput = ({ onChange, onClick, value, ref }: SearchInputProps ) => {
                     borderColor = "gray.100"
                     rounded = "md"
                     value = { value }
-                    ref = { ref }
+                    ref = { inputRef }
                     autoComplete = "off"
                     onChange = { onChange }
                 />
