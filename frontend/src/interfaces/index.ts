@@ -44,7 +44,7 @@ export interface SearchInputProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onClick: () => void;
     value: string;
-    ref: React.RefObject<HTMLInputElement>;
+    inputRef: React.RefObject<HTMLInputElement>;
 };
 
 export interface NewChatModalProps {
