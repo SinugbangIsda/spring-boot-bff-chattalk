@@ -1,6 +1,7 @@
 import { Button, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "@chakra-ui/react";
+import { NewChatModalProps } from "../../../interfaces";
 
-const NewChatModal = ({ isOpen, onClose }: any) => {
+const NewChatModal = ({ isOpen, onClose }: NewChatModalProps) => {
     return (
         <Modal
             isOpen = { isOpen }
