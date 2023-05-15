@@ -45,4 +45,9 @@ export interface SearchInputProps {
     onClick: () => void;
     value: string;
     ref: React.RefObject<HTMLInputElement>;
-}
+};
+
+export interface NewChatModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+};
