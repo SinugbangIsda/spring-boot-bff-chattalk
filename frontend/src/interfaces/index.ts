@@ -39,3 +39,10 @@ export interface AuthCardFooterProps {
 export interface AppLayoutProps {
     children: JSX.Element | JSX.Element[];
 };
+
+export interface SearchInputProps {
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onClick: () => void;
+    value: string;
+    ref: React.RefObject<HTMLInputElement>;
+}
