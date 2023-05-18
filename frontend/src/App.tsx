@@ -11,6 +11,8 @@ const Login = lazyLoad(() => import('./pages/login'));
 const Register = lazyLoad(() => import('./pages/register'));
 const ForgotPassword = lazyLoad(() => import('./pages/forgotpassword'));
 const Error404 = lazyLoad(() => import('./pages/error404'));
+const Profile = lazyLoad(() => import('./pages/profile'));
+const Users = lazyLoad(() => import('./pages/users'));
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: "/chat/:id",
         element: <Chat />
+      },
+      {
+        path: "/users",
+        element: <Users />
+      },
+      {
+        path: "/profile",
+        element: <Profile />
       }
     ]
   },
