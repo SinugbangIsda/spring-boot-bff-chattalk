@@ -27,6 +27,8 @@
     </properties>
 
     <modules>
+        <module>chattalk-consumer</module>
+        <module>chattalk-interface</module>
         <module>chattalk-provider</module>
     </modules>
 
@@ -52,10 +54,9 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-dependencies-zookeeper -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-dependencies-zookeeper</artifactId>
+                <artifactId>dubbo-dependencies-zookeeper-curator5</artifactId>
                 <version>${dubbo.version}</version>
                 <type>pom</type>
             </dependency>
